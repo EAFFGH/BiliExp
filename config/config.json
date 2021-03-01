@@ -6,10 +6,12 @@
     "default": {
         "vip_task": {   // 任务:1号领取大会员B币劵优惠券，28号花费剩余B币劵，下面为本功能详细配置
             "enable": true, //任务开关，值为true或false分别代表开启和关闭
+        /*
             "BpCharge": {   // 设置花费B币劵的方式，若不花费请删除9-13行
                 "charge": 2, // 值为整数，给自己充电，花费劵的数量为2，不充电直接删除本行
                 "Bp2Gold": 3 // 值为整数，兑换金瓜子，花费劵的数量为3，不兑换直接删除本行
                 // charge和Bp2Gold可兑换位置来调整兑换优先级
+                */
             }
         },
         "group_sign_task": true,   // 任务:应援团签到，值为true或false分别代表开启和关闭
@@ -174,7 +176,7 @@
                     使用actions的用户也可以直接使用secrets(push_message)，不需要填写本项
                     如果使用其他推送平台，请自行查阅相应平台数据格式，按照本模板添加到本配置中，理论上本项目从配置文件上支持所有http格式的消息推送平台    */
 
-        "http_header": {"User-Agent":"Mozilla/5.0"}, // 定义http头部，访问消息推送接口时使用
+        "http_header": {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36 Edg/88.0.705.63"}, // 定义http头部，访问消息推送接口时使用
         "variable": { // 声明变量,在hooks参数中的url参数和params参数中使用大括号{}可直接引用在此声明的变量，"msg_"开头变量为程序内置变量不允许赋值
             "msg_simple": null, // msg_simple为简化的日志消息，用于下面hooks消息推送接口引用
         //  "msg_raw": null,    // msg_raw为完整的日志消息，用于下面hooks消息推送接口引用，若不引用最好注释掉，否则占用内存空间
